@@ -1,0 +1,28 @@
+
+# Info
+title: Vue-Jekyll
+twitter: "http://twitter.com/bryanschuetz"
+github: "http://github.com/bryanschuetz"
+description: |
+  "A bare-bones template for Jekyll sites that leverages the Javascript framework [Vue](http://vuejs.org) for any functionality that a static build can't accomodate."
+baseurl: ""
+url: "http://bryanschuetz.github.io"
+
+# Settings
+markdown: kramdown
+gems:
+excerpt_seperator: "<!--more-->"
+destination: "./build"
+permalink: "/:title"
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - ".gitignore"
+  - node_modules
+  - js/src/main.js
+  - webpack.config.js
+  - package.json
+  - .jshintrc
+  - .sass-cache
+sass:
+  style: compressed
