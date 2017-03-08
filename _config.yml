@@ -26,11 +26,12 @@ exclude:
   - Gemfile.lock
   - ".gitignore"
   - node_modules
-  - js/src/main.js
+  - js/source.js
   - webpack.config.js
   - package.json
   - .jshintrc
   - .sass-cache
   - .browser-sync.js
+  - npm-debug.log
 sass:
   style: compressed
