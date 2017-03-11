@@ -5,7 +5,7 @@ import WebFont from 'webfontloader'
 // 🎌 GOOGLE FONTS, CAUSE TYPOGRAPHY 🎌
 WebFont.load({
  google: {
-   families: ['Alegreya:400,40italic,700,900']
+   families: ['Alegreya:400,italic,700,900']
  }
 });
 
