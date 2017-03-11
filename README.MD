@@ -1,0 +1,1 @@
+A bare-bones template for building static sites that leverage a modern javascript framework for dynamic functionality. Build with NPM, Webpack, Vue, and Jekyll.

@@ -33,5 +33,6 @@ exclude:
   - .sass-cache
   - .browser-sync.js
   - npm-debug.log
+  - README.MD
 sass:
   style: compressed
