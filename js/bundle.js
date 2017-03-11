@@ -7031,13 +7031,13 @@ var _webfontloader2 = _interopRequireDefault(_webfontloader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// 🎌 GOOGLE FONTS, CAUSE TYPOGRAPHY 🎌
+// 🎌 IMPORT MODULES AND WHATNOT. ALL OUR VUE STUFF IS HERE, BUT WITH WEBPACK, WE COULD ALSO USE THAT SINGLE FILE COMPONENT HOTTNESS: https://vuejs.org/v2/guide/single-file-components.html 🎌
 _webfontloader2.default.load({
   google: {
     families: ['Alegreya:400,40italic,700,900']
   }
 });
-
-var foo = 'simply simple';
 
 /***/ })
 /******/ ]);

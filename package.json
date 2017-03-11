@@ -1,4 +1,5 @@
 {
+  "_comment": "🎌 WE'RE USING NPM SCRIPTS TO MANAGE THE BUILD PROCESS. LOCALLY, JUST `NPM INSTALL && BUNDLE INSTALL && NPM RUN JEKYLLFY 🎌",
   "name": "vue-jekyll",
   "version": "0.0.1",
   "description": "A bare-bones template for building static sites that leverage a modern javascript framework for dynamic functionality. Built with [NPM](https://www.npmjs.com), [Vue](https://vuejs.org), and [Jekyll](https://jekyllrb.com).",
@@ -9,7 +10,10 @@
     "jekyllfy": "npm run packit & npm run buildit & npm run serve",
     "serve": "browser-sync start --config browser-sync.js"
   },
-  "keywords": [],
+  "keywords": [
+    "jekyll",
+    "Vue"
+  ],
   "author": "Bryan Schuetz",
   "license": "Fuck do I care?",
   "dependencies": {
@@ -18,6 +22,8 @@
     "babel-loader": "^6.4.0",
     "babel-preset-es2015": "^6.22.0",
     "browser-sync": "^2.18.8",
+    "bulma": "^0.3.2",
+    "sass-loader": "^6.0.3",
     "vue": "^2.2.1",
     "webfontloader": "^1.6.27",
     "webpack": "^2.2.1"

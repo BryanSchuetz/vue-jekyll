@@ -1,0 +1,82 @@
+// 🎌 A VISUAL AID FOR UNDERSTANDING THE GRID 🎌
+body{
+  position: relative;
+  margin: 0;
+}
+.gridly-wrap{
+  display: none;
+  @include clearfix;
+  position: relative;
+  z-index: -100;
+}
+div.gridly{
+  @include clearfix; 
+  background-color: rgba(white, 0.0);
+  position: absolute;
+}
+.column{
+  background-color: rgba($orange, 0.2);
+  @include width(1);
+  height: 1000px;
+  float: left;
+  margin-right: $gutter;
+  &.four{
+    margin-right: 0;
+  }
+  @include responsive(tiny-screens){
+    &.four{
+      margin-right: $gutter;
+    }
+    &.five{
+    margin-right: 0;
+    }
+  }
+  @include responsive(small-screens){
+    &.five{
+      margin-right: $gutter;
+    }
+    &.six{
+    margin-right: 0;
+    }
+  }
+  @include responsive(medium-screens){
+    &.six{
+    margin-right: $gutter;
+    }
+    &.eight{
+    margin-right: 0;
+    }
+  }
+  @include responsive(wide-screens){
+    &.eight{
+    margin-right: $gutter;
+    }
+    &.ten{
+    margin-right: 0;
+    }
+  }
+  @include responsive(ultra-wide-screens){
+    &.ten{
+    margin-right: $gutter;
+    }
+    &.twelve{
+    margin-right: 0;
+    }
+  }
+  @include responsive(extra-ultra-wide-screens){
+    &.twelve{
+    margin-right: $gutter;
+    }
+    &.fourteen{
+    margin-right: 0;
+    }
+  }
+  @include responsive(extra-extra-ultra-wide-screens){
+    &.fourteen{
+    margin-right: $gutter;
+    }
+    &.sixteen{
+    margin-right: 0;
+    }
+  }
+}
