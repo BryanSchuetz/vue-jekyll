@@ -19,19 +19,17 @@ html{
   @include responsive(extra-extra-ultra-wide-screens){
     font-size: 40px;
   }
-}
-// 🎌 WEBFONTS & STUFF 🎌
-// 🎌 YES, I PROBABLY SHOULDN'T HIDE WHILE LOADING BUT I HATE THE FLOUT 🎌
-html.wf-loading{
   opacity: 0;
-}
-html.wf-active body{
-  display: block;
-  font-family: 'Alegreya', 'Georgia', serif;
-}
-html.wf-inactive body, html.wf-fontinactive body{
-  display: block;
-  font-family: 'Georgia', serif;
+  &.wf-active{
+    opacity: 1;
+    display: block;
+    font-family: 'Alegreya', 'Georgia', serif;
+  }
+  &.wf-inactive, &.wf-fontinactive{
+    opacity: 1;
+    display: block;
+    font-family: 'Georgia', serif;
+  }
 }
 
 // 🎌 PSUEDO TYPOGRAPHIC MODULAR SCALE BASED ON A 1.5 RATIO 🎌

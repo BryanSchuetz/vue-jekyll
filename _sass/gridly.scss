@@ -4,7 +4,7 @@ body{
   margin: 0;
 }
 .gridly-wrap{
-  display: none;
+  // display: none;
   @include clearfix;
   position: relative;
   z-index: -100;

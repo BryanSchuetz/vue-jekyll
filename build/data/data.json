@@ -1,0 +1,6 @@
+{ 
+  "title": "Static, Meet Dynamic.",
+  "description": "Take the best parts of a static site workflow and combine them with the new hottness of a client side framework, what you end up with is a great new way publish content on the modern web. This Repo is a bare-bones template for building static sites that leverage a modern javascript framework for dynamic functionality. Built with NPM, Webpack, Vue, and Jekyll.",
+  "staticBenefits": ["Speed", "Cacheability", "Reliability", "Local Workflow"],
+  "dynamicBenefits": ["Isomorphic Redering", "UI Speed", "Complext State Management"]
+}

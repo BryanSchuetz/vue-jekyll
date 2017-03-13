@@ -4,12 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="&quot;A bare-bones template for building static sites that leverage a modern javascript framework for dynamic functionality. Built with [NPM](https://www.npmjs.co...">
+  <meta name="description" content="Take the best parts of a static site workflow and combine them with the new hottness of a client side framework, what you end up with is a great new way publ...">
 
   <title>Vue-Jekyll</title>
 
   <link rel="stylesheet" href="/css/main.css">
-  <script src="/js/bundle.js"></script>
 </head>
   <body>
   <div class="gridly-wrap">
@@ -39,8 +38,22 @@
   </header>
   <div class="main">
     <div class="main-inner index">
-  <p>“A bare-bones template for building static sites that leverage a modern javascript framework for dynamic functionality. Built with <a href="https://www.npmjs.com">NPM</a>, <a href="https://vuejs.org">Vue</a>, and <a href="https://jekyllrb.com">Jekyll</a>.”</p>
-
+  <div id="content">
+    <h2 v-text="title"></h2>
+    <div v-html="description"></div>
+    <div class="benefits">
+      <h3>Static Sites</h3>
+      <ul>
+        <li v-for="benefit in staticBenefits" v-text="benefit"></li>
+      </ul>
+    </div>
+    <div class="benefits">
+      <h3>Client Side JS</h3>
+      <ul>
+        <li v-for="benefit in dynamicBenefits" v-text="benefit"></li>
+      </ul>
+    </div>
+  </div>
 </div>
   </div>
   <footer>
@@ -48,5 +61,6 @@
       
     </div>
   </footer>
+  <script src="/js/bundle.js"></script>
   </body>
 </html>
