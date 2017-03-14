@@ -60,3 +60,26 @@ header{
     margin-right: 0;
    }
 }
+.main, .bennies{
+  @include clearfix;
+}
+input, button{
+  font-size: 1rem;
+  font-family: 'Alegreya', 'Georgia', serif;
+}
+input{
+  padding-left: .1rem;
+}
+button{
+  padding: .1rem;
+}
+footer{
+  margin-top: 15rem;
+  .footer-inner p{
+    text-align: center;
+  }
+}
+.environment{
+  text-align: center;
+  margin-top: 5rem;
+}

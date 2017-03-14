@@ -68,33 +68,6 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -1384,7 +1357,34 @@ if (true) {
   return this || (typeof window !== 'undefined' ? window : global);
 }());
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
 
 /***/ }),
 /* 2 */
@@ -10618,7 +10618,7 @@ Vue$3.compile = compileToFunctions;
 
 /* harmony default export */ __webpack_exports__["default"] = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(7), __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(7), __webpack_require__(1)))
 
 /***/ }),
 /* 4 */
@@ -10660,7 +10660,7 @@ var _data = __webpack_require__(6);
 
 var _data2 = _interopRequireDefault(_data);
 
-var _marked = __webpack_require__(1);
+var _marked = __webpack_require__(0);
 
 var _marked2 = _interopRequireDefault(_marked);
 
@@ -10690,12 +10690,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
 
 exports.default = {
   data: function data() {
     return {
       siteData: _data2.default,
-      newStatic: ''
+      newItem: 'Data binding',
+      newDynamic: []
     };
   },
 
@@ -10713,6 +10719,12 @@ exports.default = {
     rawdescription: function rawdescription() {
       return (0, _marked2.default)(_data2.default.description);
     }
+  },
+  methods: {
+    addItem: function addItem() {
+      this.newDynamic.push(this.newItem);
+      this.newItem = '';
+    }
   }
 };
 
@@ -10722,7 +10734,8 @@ exports.default = {
 
 module.exports = {
 	"title": "Static, Meet Dynamic.",
-	"description": "Take the best parts of a static site workflow and combine them with the new hottness of a client side framework. What you end up with is a great new way to publish content on the modern web. This Repo is a bare-bones template for building static sites that leverage a modern javascript framework for dynamic functionality. Built with [NPM](https://www.npmjs.com/), [Webpack](https://webpack.js.org), [Vue](https://vuejs.org), and [Jekyll](https://jekyllrb.com).\n",
+	"description": "[This Repo](https://github.com/BryanSchuetz/vue-jekyll) is a bare-bones template for building static sites that leverage a client-side JS framework for dynamic functionality. It uses [NPM](https://www.npmjs.com/), [Webpack](https://webpack.js.org), [Vue](https://vuejs.org), and [Jekyll](https://jekyllrb.com). It uses **NPM (and Bundler)** to manage the project's dependencies, and improve the development workflow. It uses **Webpack** to roll up and transpile all the individual modules and components into a single bundeled JS file. It uses **Jekyll** to bring it all together, build the site, and serve an initial static file to the browser. It uses **Vue** to render pages on the client side (if JS is supported), and provide any additional dynamic functionality that may be needed.\n",
+	"combination": "Take the best parts of a static site workflow and combine them with the new hottness of a client side framework. What you end up with is a great new way to publish content on the modern web. Isomorphic blah blah blah: Use Jekyll to publish the site's pages, and the JSON data behind them—use Vue to build the same pages with the same data. Serve the first static page to the user—if JS is supported, build the rest of the pages/content with Vue. If there's no JS support, continue to send pre-rendered static pages down the wire.\n",
 	"staticBenefits": [
 		"speed (cdn/pre-rendered)",
 		"cacheability",
@@ -10988,7 +11001,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     domProps: {
       "innerHTML": _vm._s(_vm.rawdescription)
     }
-  }), _vm._v(" "), _c('div', {
+  }), _vm._v(" "), _c('h2', [_vm._v("The Best of Both Worlds.")]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.siteData.combination))]), _vm._v(" "), _c('div', {
+    staticClass: "bennies"
+  }, [_c('div', {
     staticClass: "benefits"
   }, [_c('h3', [_vm._v("Static Sites")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('ul', _vm._l((_vm.siteData.staticBenefits), function(benefit) {
     return _c('li', [_vm._v(_vm._s(_vm._f("capitalize")(benefit)))])
@@ -10996,12 +11011,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "benefits"
   }, [_c('h3', [_vm._v("Client-Side JS")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('ul', [_vm._l((_vm.siteData.dynamicBenefits), function(benefit) {
     return _c('li', [_vm._v(_vm._s(_vm._f("capitalize")(benefit)))])
-  }), _vm._v(" "), _c('li', [_vm._v(_vm._s(_vm.newDynamic))])], 2)]), _vm._v(" "), _c('input', {
+  }), _vm._v(" "), _vm._l((_vm.newDynamic), function(item) {
+    return _c('li', [_vm._v(_vm._s(item))])
+  }), _vm._v(" "), _c('li', [_c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.newStatic),
-      expression: "newStatic"
+      value: (_vm.newItem),
+      expression: "newItem"
     }],
     attrs: {
       "label": "More great things about static sites",
@@ -11009,19 +11026,24 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "name": ""
     },
     domProps: {
-      "value": (_vm.newStatic)
+      "value": (_vm.newItem)
     },
     on: {
       "input": function($event) {
         if ($event.target.composing) { return; }
-        _vm.newStatic = $event.target.value
+        _vm.newItem = $event.target.value
       }
     }
   }), _vm._v(" "), _c('button', {
+    attrs: {
+      "placeholder": "Another benefit"
+    },
     on: {
-      "click": function($event) {}
+      "click": _vm.addItem
     }
-  }, [_vm._v("Add to the list")])])
+  }, [_vm._v("Add")])])], 2)])]), _vm._v(" "), _c('p', {
+    staticClass: "environment"
+  }, [_vm._v("*Disable Javascript to see the page rendered with Jekyll.")])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -11046,7 +11068,7 @@ var _webfontloader = __webpack_require__(4);
 
 var _webfontloader2 = _interopRequireDefault(_webfontloader);
 
-var _marked = __webpack_require__(1);
+var _marked = __webpack_require__(0);
 
 var _marked2 = _interopRequireDefault(_marked);
 

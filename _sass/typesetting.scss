@@ -19,7 +19,9 @@ html{
   // @include responsive(extra-extra-ultra-wide-screens){
   //   font-size: 40px;
   // }
-  opacity: 0;
+  &.wf-loading{
+    opacity: 0;
+  }
   &.wf-active{
     opacity: 1;
     display: block;
