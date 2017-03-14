@@ -1,10 +1,10 @@
-// 🎌 A VISUAL AID FOR UNDERSTANDING THE GRID 🎌
+// 🎌 A VISUAL AID FOR UNDERSTANDING THE GRID JUST TOGGLE DISPLAY ON THE .GRIDLY-WRAP BELOW 🎌
 body{
   position: relative;
   margin: 0;
 }
 .gridly-wrap{
-  // display: none;
+  display: none;
   @include clearfix;
   position: relative;
   z-index: -100;

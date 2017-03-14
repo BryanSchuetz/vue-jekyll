@@ -25,7 +25,10 @@
     "browser-sync": "^2.18.8",
     "extract-text-webpack-plugin": "^2.1.0",
     "json-loader": "^0.5.4",
+    "marked": "^0.3.6",
     "vue": "^2.2.1",
+    "vue-loader": "^11.1.4",
+    "vue-template-compiler": "^2.2.2",
     "webfontloader": "^1.6.27",
     "webpack": "^2.2.1"
   }

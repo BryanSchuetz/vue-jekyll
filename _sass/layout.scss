@@ -36,6 +36,27 @@ header{
   background-color: $vuegreen;
 }
 .benefits{
-  width: 40%;
-  float: left;
+  @include width(4);
+    margin: auto;
+  @include responsive(medium-screens){
+    float: left;
+    margin-right: $gutter;
+  }
+  @include responsive(wide-screens){
+    @include width(5);
+  }
+  @include responsive(ultra-wide-screens){
+    @include width(6);
+  }
+  @include responsive(extra-ultra-wide-screens){
+    @include width(7);   
+  }
+  @include responsive(extra-extra-ultra-wide-screens){
+    @include width(8);   
+  }
+}
+.copy .benefits:last-of-type{
+  @include responsive(medium-screens){
+    margin-right: 0;
+   }
 }

@@ -1,9 +1,5 @@
 ---
+title: siteData
 ---
 
-{ 
-  "title": "{{ site.tagline | strip }}",
-  "description": "{{ site.description | strip }}",
-  "staticBenefits": ["Speed", "Cacheability", "Reliability", "Local Workflow"],
-  "dynamicBenefits": ["Isomorphic Redering", "UI Speed", "Complext State Management"]
-}
+{{ site.data.app | jsonify }}

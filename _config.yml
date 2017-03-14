@@ -3,9 +3,6 @@
 title: Vue-Jekyll
 twitter: "http://twitter.com/bryanschuetz"
 github: "http://github.com/bryanschuetz"
-description: |
-  Take the best parts of a static site workflow and combine them with the new hottness of a client side framework, what you end up with is a great new way publish content on the modern web. This Repo is a bare-bones template for building static sites that leverage a modern javascript framework for dynamic functionality. Built with NPM, Webpack, Vue, and Jekyll.
-tagline: "Static, Meet Dynamic."
 baseurl: ""
 url: "http://bryanschuetz.github.io"
 
@@ -23,6 +20,7 @@ excerpt_seperator: "<!--more-->"
 destination: "./build"
 permalink: "/:titsle"
 exclude:
+  - components
   - Gemfile
   - Gemfile.lock
   - ".gitignore"
@@ -32,7 +30,7 @@ exclude:
   - package.json
   - .jshintrc
   - .sass-cache
-  - .browser-sync.js
+  - browser-sync.js
   - npm-debug.log
   - README.MD
 sass:

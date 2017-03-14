@@ -1,7 +1,8 @@
-// 🎌 IMPORT MODULES AND WHATNOT. ALL OUR VUE STUFF IS HERE, BUT WITH WEBPACK, WE COULD ALSO USE THAT SINGLE FILE COMPONENT HOTTNESS: https://vuejs.org/v2/guide/single-file-components.html 🎌
+// 🎌 IMPORT MODULES, COMPONENTS AND WHATNOT. CREATE THE VUE INSTANCE 🎌
 import Vue from 'vue'
 import WebFont from 'webfontloader'
-import siteData from '../build/data/data.json'
+import Marked from 'marked'
+import App from '../components/app.vue'
 
 // 🎌 GOOGLE FONTS, CAUSE TYPOGRAPHY 🎌
 WebFont.load({
@@ -12,5 +13,5 @@ WebFont.load({
 
 var app = new Vue({
   el: '#content',
-  data: siteData
+  render: h => h(App)
 })

@@ -3,19 +3,6 @@ layout: default
 ---
 <div class="main-inner index">
   <div id="content">
-    <h2 v-text="title"></h2>
-    <div v-html="description"></div>
-    <div class="benefits">
-      <h3>Static Sites</h3>
-      <ul>
-        <li v-for="benefit in staticBenefits" v-text="benefit"></li>
-      </ul>
-    </div>
-    <div class="benefits">
-      <h3>Client Side JS</h3>
-      <ul>
-        <li v-for="benefit in dynamicBenefits" v-text="benefit"></li>
-      </ul>
-    </div>
+    {{ content }}
   </div>
 </div>

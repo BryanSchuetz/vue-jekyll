@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Take the best parts of a static site workflow and combine them with the new hottness of a client side framework, what you end up with is a great new way publ...">
+  <meta name="description" content="">
 
   <title>Vue-Jekyll</title>
 
@@ -39,20 +39,42 @@
   <div class="main">
     <div class="main-inner index">
   <div id="content">
-    <h2 v-text="title"></h2>
-    <div v-html="description"></div>
-    <div class="benefits">
-      <h3>Static Sites</h3>
-      <ul>
-        <li v-for="benefit in staticBenefits" v-text="benefit"></li>
-      </ul>
-    </div>
-    <div class="benefits">
-      <h3>Client Side JS</h3>
-      <ul>
-        <li v-for="benefit in dynamicBenefits" v-text="benefit"></li>
-      </ul>
-    </div>
+    <div class="copy">
+  <h2>Static, Meet Dynamic.</h2>
+  <p><p>Take the best parts of a static site workflow and combine them with the new hottness of a client side framework. What you end up with is a great new way to publish content on the modern web. This Repo is a bare-bones template for building static sites that leverage a modern javascript framework for dynamic functionality. Built with <a href="https://www.npmjs.com/">NPM</a>, <a href="https://webpack.js.org">Webpack</a>, <a href="https://vuejs.org">Vue</a>, and <a href="https://jekyllrb.com">Jekyll</a>.</p>
+</p>
+  <div class="benefits">
+    <h3>Static Sites</h3>
+    <hr />
+    <ul>
+        
+          <li>Speed (cdn/pre-rendered)</li>
+        
+          <li>Cacheability</li>
+        
+          <li>Reliability</li>
+        
+          <li>Developer workflow</li>
+        
+    </ul>
+  </div>
+  <div class="benefits">
+    <h3>Client-Side JS</h3>
+    <hr />
+    <ul>
+        
+          <li>Speed (ui/ux)</li>
+        
+          <li>Isomorphic rendering</li>
+        
+          <li>Complex state management</li>
+        
+          <li>Dynamic components</li>
+        
+    </ul>
+  </div>
+</div>
+
   </div>
 </div>
   </div>

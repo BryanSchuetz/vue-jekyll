@@ -10,15 +10,15 @@ html{
   @include responsive(wide-screens){
     font-size: 20px;
   }
-  @include responsive(ultra-wide-screens){
-    font-size: 24px;
-  }
-  @include responsive(extra-ultra-wide-screens){
-    font-size: 30px;
-  }
-  @include responsive(extra-extra-ultra-wide-screens){
-    font-size: 40px;
-  }
+  // @include responsive(ultra-wide-screens){
+  //   font-size: 24px;
+  // }
+  // @include responsive(extra-ultra-wide-screens){
+  //   font-size: 30px;
+  // }
+  // @include responsive(extra-extra-ultra-wide-screens){
+  //   font-size: 40px;
+  // }
   opacity: 0;
   &.wf-active{
     opacity: 1;
