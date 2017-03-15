@@ -6,7 +6,7 @@
 
 ## The best of both worlds.
 
-Take the best parts of a static site workflow and combine them with the new hotness of a client side framework. What you end up with is a great new way to publish content on the modern web. Isomorphic blah blah blah: Use Jekyll to publish the site's pages, and the JSON data behind them—use Vue to build the same pages with the same data. Serve the first static page to the user—if JS is supported, build the rest of the pages/content with Vue. If there's no JS support, continue to send pre-rendered static pages down the wire.
+Take the best parts of a static site workflow and combine them with the new hotness of a client side framework. What you end up with is a great new way to publish content on the modern web. Isomorphic blah blah blah: Use Jekyll to publish the site's pages, and the JSON data behind them—use Vue to build the same pages with the same data. Serve the first static page to the user—if JS is supported, just send the JSON down the wire and build the rest of the pages/content with Vue. If there's no JS support, continue to send pre-rendered static pages down the wire.
 
 ## Setup
 
