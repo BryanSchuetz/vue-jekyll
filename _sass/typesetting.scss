@@ -1,9 +1,6 @@
 // 🎌 ADAPTIVE REM BASED SIZING 🎌
 html{
-  font-size: 12px;
-  @include responsive(small-screens){
-    font-size: 14px;
-  }
+  font-size: 14px;
   @include responsive(medium-screens){
     font-size: 16px;
   }
