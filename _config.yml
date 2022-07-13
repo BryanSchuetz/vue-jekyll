@@ -15,7 +15,6 @@ collections:
 
 # Settings
 markdown: kramdown
-gems:
 excerpt_seperator: "<!--more-->"
 destination: "./build"
 permalink: "/:title"

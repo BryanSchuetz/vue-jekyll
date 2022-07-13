@@ -1,7 +1,8 @@
+.DS_Store
 _site
+node_modules
 .sass-cache
 .jekyll-metadata
-node_modules
-.DS_Store
+Gemfile.lock
 npm-debug.log
-browser-sync.js 
+*package-lock.json
